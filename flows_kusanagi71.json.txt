@@ -1,0 +1,634 @@
+[
+    {
+        "id": "415e222e.833b5c",
+        "type": "tab",
+        "label": "Pixela",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "47049d9f.6c1b94",
+        "type": "tab",
+        "label": "Manage",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3c17b71.4497e48",
+        "type": "pixela-client",
+        "z": "",
+        "name": "pixela-config"
+    },
+    {
+        "id": "70546d19.336244",
+        "type": "ui_group",
+        "z": "",
+        "name": "KusaButton",
+        "tab": "5b228e6.578827",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "17bde4f1.7a835b",
+        "type": "ui_group",
+        "z": "",
+        "name": "Koudenpa's Node-RED deploy count",
+        "tab": "5b228e6.578827",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "5b228e6.578827",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Pixela",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "728f79b9.8e21e8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED ダッシュボード",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d9796bee.0a76f8",
+        "type": "git-nodes-config",
+        "z": "",
+        "name": "7474/node-red-flow-test-repo",
+        "git": "git@github.com:7474/node-red-flow-test-repo.git"
+    },
+    {
+        "id": "12042faa.58178",
+        "type": "inject",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 134,
+        "y": 80,
+        "wires": [
+            [
+                "bc484457.f6b1e8"
+            ]
+        ]
+    },
+    {
+        "id": "bc484457.f6b1e8",
+        "type": "pixela",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "method": "PUT",
+        "path": "/graphs/node-red-deploy/increment",
+        "apiclient": "3c17b71.4497e48",
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "9715ffc3.6db3c"
+            ]
+        ]
+    },
+    {
+        "id": "7e16b361.0af8fc",
+        "type": "ui_button",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "group": "70546d19.336244",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "w",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 114,
+        "y": 384,
+        "wires": [
+            [
+                "60f0f648.046278"
+            ]
+        ]
+    },
+    {
+        "id": "f6ca6f8e.fa404",
+        "type": "ui_template",
+        "z": "415e222e.833b5c",
+        "group": "17bde4f1.7a835b",
+        "name": "node-red-deploy",
+        "order": 1,
+        "width": "12",
+        "height": "4",
+        "format": "<img src="https://pixe.la/v1/users/koudenpa/graphs/node-red-deploy">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 144,
+        "y": 592,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60f0f648.046278",
+        "type": "pixela",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "method": "PUT",
+        "path": "/graphs/www/increment",
+        "apiclient": "3c17b71.4497e48",
+        "x": 226,
+        "y": 432,
+        "wires": [
+            [
+                "7c37ea57.322464",
+                "f90bd551.588768"
+            ]
+        ]
+    },
+    {
+        "id": "6a8dd56.fcfdf2c",
+        "type": "ui_template",
+        "z": "415e222e.833b5c",
+        "group": "70546d19.336244",
+        "name": "www",
+        "order": 2,
+        "width": "12",
+        "height": "4",
+        "format": "<img src="https://pixe.la/v1/users/koudenpa/graphs/www?{{msg.timestamp}}">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 514,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c37ea57.322464",
+        "type": "change",
+        "z": "415e222e.833b5c",
+        "name": "Set timestamp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 352,
+        "y": 480,
+        "wires": [
+            [
+                "6a8dd56.fcfdf2c"
+            ]
+        ]
+    },
+    {
+        "id": "c5f04d64.30b5c",
+        "type": "ui_toast",
+        "z": "415e222e.833b5c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "",
+        "name": "",
+        "x": 698,
+        "y": 432,
+        "wires": []
+    },
+    {
+        "id": "f90bd551.588768",
+        "type": "template",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "w {{payload.message}}",
+        "output": "str",
+        "x": 524,
+        "y": 432,
+        "wires": [
+            [
+                "c5f04d64.30b5c"
+            ]
+        ]
+    },
+    {
+        "id": "e38c3a9f.032b48",
+        "type": "catch",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "scope": null,
+        "x": 124,
+        "y": 192,
+        "wires": [
+            [
+                "16260c35.3c3b34",
+                "ffdfd9f2.70a5a8",
+                "e3cb4b54.98fd08"
+            ]
+        ]
+    },
+    {
+        "id": "edf7486e.e8d428",
+        "type": "ui_toast",
+        "z": "415e222e.833b5c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "#ff8080",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "",
+        "name": "",
+        "x": 490,
+        "y": 192,
+        "wires": []
+    },
+    {
+        "id": "16260c35.3c3b34",
+        "type": "template",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Catch Error. {{payload.message}}",
+        "output": "str",
+        "x": 300,
+        "y": 192,
+        "wires": [
+            [
+                "edf7486e.e8d428"
+            ]
+        ]
+    },
+    {
+        "id": "ffdfd9f2.70a5a8",
+        "type": "debug",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 290,
+        "y": 224,
+        "wires": []
+    },
+    {
+        "id": "fa520de1.76ae7",
+        "type": "comment",
+        "z": "415e222e.833b5c",
+        "name": "Kusa On Node-RED Deploy",
+        "info": "",
+        "x": 136,
+        "y": 32,
+        "wires": []
+    },
+    {
+        "id": "9d8a88c7.eaf6e8",
+        "type": "comment",
+        "z": "415e222e.833b5c",
+        "name": "Handle Error",
+        "info": "",
+        "x": 86,
+        "y": 144,
+        "wires": []
+    },
+    {
+        "id": "f806acaf.8c7d7",
+        "type": "comment",
+        "z": "415e222e.833b5c",
+        "name": "Node-RED Dashboard Kusa Button",
+        "info": "",
+        "x": 156,
+        "y": 336,
+        "wires": []
+    },
+    {
+        "id": "3c2b363e.73861a",
+        "type": "comment",
+        "z": "415e222e.833b5c",
+        "name": "Deploy Count Graph",
+        "info": "",
+        "x": 106,
+        "y": 544,
+        "wires": []
+    },
+    {
+        "id": "aeaa8328.86cca",
+        "type": "http in",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "url": "/pixela/counter/:graph",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 174,
+        "y": 704,
+        "wires": [
+            [
+                "de1ab7aa.a304e8"
+            ]
+        ]
+    },
+    {
+        "id": "59757bab.3e5f54",
+        "type": "comment",
+        "z": "415e222e.833b5c",
+        "name": "Kusa Counter",
+        "info": "",
+        "x": 86,
+        "y": 656,
+        "wires": []
+    },
+    {
+        "id": "8ccc4a3c.7f2298",
+        "type": "http response",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 672,
+        "y": 768,
+        "wires": []
+    },
+    {
+        "id": "32d4bc00.77fbd4",
+        "type": "function",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "func": "msg.statusCode = 303;
+msg.headers = {
+    Location: "https://pixe.la/v1/users/koudenpa/graphs/" + msg.req.params.graph
+}
+delete msg.payload;
+return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 546,
+        "y": 768,
+        "wires": [
+            [
+                "8ccc4a3c.7f2298"
+            ]
+        ]
+    },
+    {
+        "id": "68702382.44349c",
+        "type": "pixela",
+        "z": "415e222e.833b5c",
+        "name": "PUT Increment",
+        "method": "PUT",
+        "path": "/",
+        "apiclient": "3c17b71.4497e48",
+        "x": 528,
+        "y": 704,
+        "wires": [
+            [
+                "32d4bc00.77fbd4"
+            ]
+        ]
+    },
+    {
+        "id": "de1ab7aa.a304e8",
+        "type": "function",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "func": "msg.path = "/graphs/" + msg.req.params.graph + "/increment";
+
+return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 704,
+        "wires": [
+            [
+                "68702382.44349c"
+            ]
+        ]
+    },
+    {
+        "id": "e3cb4b54.98fd08",
+        "type": "http response",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "statusCode": "500",
+        "headers": {},
+        "x": 300,
+        "y": 256,
+        "wires": []
+    },
+    {
+        "id": "19553a5b.e55e06",
+        "type": "http request",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "url": "",
+        "tls": "",
+        "x": 710,
+        "y": 120,
+        "wires": [
+            [
+                "9ec44c39.d8256"
+            ]
+        ]
+    },
+    {
+        "id": "9715ffc3.6db3c",
+        "type": "function",
+        "z": "415e222e.833b5c",
+        "name": "Set PURGE request",
+        "func": "msg.method = "PURGE";
+msg.url = "https://camo.githubusercontent.com/75f077e97061cea072991320fefa1bd788d54a68/68747470733a2f2f706978652e6c612f76312f75736572732f6b6f7564656e70612f6772617068732f6e6f64652d7265642d6465706c6f79";
+
+return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 80,
+        "wires": [
+            [
+                "19553a5b.e55e06"
+            ]
+        ]
+    },
+    {
+        "id": "9ec44c39.d8256",
+        "type": "debug",
+        "z": "415e222e.833b5c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 730,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7273d531.5c3e4c",
+        "type": "ui_template",
+        "z": "415e222e.833b5c",
+        "group": "70546d19.336244",
+        "name": "Dashboard Access Counter",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<h4>Kusa Button Dashboard Access Counter</h4>
+<img src="/pixela/counter/wbtndb-counter">
+
+<ol>
+    <li>Set Node-RED Flow counter endpoint to img src. `/pixela/counter/wbtndb-counter`
+    </li>
+    <li>Call Pixela increment API.</li>
+    <li>Redirect to Pixela graph endpoint.</li>
+    <li>Display incremented graph.</li>
+</ol>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 460,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f09ec3d1.e21db",
+        "type": "git-nodes",
+        "z": "47049d9f.6c1b94",
+        "label": "",
+        "branch": "master",
+        "sourcebranch": "master",
+        "gitadd": "settings.js,package.json,.config.json,lib",
+        "gitrmcache": "",
+        "debugging": true,
+        "git": "d9796bee.0a76f8",
+        "x": 140,
+        "y": 60,
+        "wires": []
+    }
+]
