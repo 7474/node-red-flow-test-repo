@@ -670,7 +670,7 @@
   },
   "node-red-contrib-git-nodes": {
    "name": "node-red-contrib-git-nodes",
-   "version": "0.2.2",
+   "version": "0.3.0",
    "local": true,
    "nodes": {
     "git-nodes": {

@@ -1,0 +1,28 @@
+{
+    "id": "7273d531.5c3e4c",
+    "type": "ui_template",
+    "z": "415e222e.833b5c",
+    "group": "70546d19.336244",
+    "name": "Dashboard Access Counter",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<h4>Kusa Button Dashboard Access Counter</h4>
+<img src="/pixela/counter/wbtndb-counter">
+
+<ol>
+    <li>Set Node-RED Flow counter endpoint to img src. `/pixela/counter/wbtndb-counter`
+    </li>
+    <li>Call Pixela increment API.</li>
+    <li>Redirect to Pixela graph endpoint.</li>
+    <li>Display incremented graph.</li>
+</ol>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "templateScope": "local",
+    "x": 460,
+    "y": 340,
+    "wires": [
+        []
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "id": "68702382.44349c",
+    "type": "pixela",
+    "z": "415e222e.833b5c",
+    "name": "PUT Increment",
+    "method": "PUT",
+    "path": "/",
+    "apiclient": "3c17b71.4497e48",
+    "x": 528,
+    "y": 704,
+    "wires": [
+        [
+            "32d4bc00.77fbd4"
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "fa520de1.76ae7",
+    "type": "comment",
+    "z": "415e222e.833b5c",
+    "name": "Kusa On Node-RED Deploy",
+    "info": "",
+    "x": 136,
+    "y": 32,
+    "wires": []
+}

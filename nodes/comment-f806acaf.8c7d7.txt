@@ -1,0 +1,10 @@
+{
+    "id": "f806acaf.8c7d7",
+    "type": "comment",
+    "z": "415e222e.833b5c",
+    "name": "Node-RED Dashboard Kusa Button",
+    "info": "",
+    "x": 156,
+    "y": 336,
+    "wires": []
+}

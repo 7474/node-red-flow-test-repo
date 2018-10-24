@@ -1,0 +1,25 @@
+{
+    "id": "7e16b361.0af8fc",
+    "type": "ui_button",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "group": "70546d19.336244",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "w",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 114,
+    "y": 384,
+    "wires": [
+        [
+            "60f0f648.046278"
+        ]
+    ]
+}

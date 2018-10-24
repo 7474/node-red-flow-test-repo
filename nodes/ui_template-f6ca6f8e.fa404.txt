@@ -1,0 +1,19 @@
+{
+    "id": "f6ca6f8e.fa404",
+    "type": "ui_template",
+    "z": "415e222e.833b5c",
+    "group": "17bde4f1.7a835b",
+    "name": "node-red-deploy",
+    "order": 1,
+    "width": "12",
+    "height": "4",
+    "format": "<img src="https://pixe.la/v1/users/koudenpa/graphs/node-red-deploy">",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "templateScope": "local",
+    "x": 144,
+    "y": 592,
+    "wires": [
+        []
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "id": "47049d9f.6c1b94",
+    "type": "tab",
+    "label": "Manage",
+    "disabled": false,
+    "info": ""
+}

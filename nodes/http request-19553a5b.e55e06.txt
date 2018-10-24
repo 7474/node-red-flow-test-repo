@@ -1,0 +1,17 @@
+{
+    "id": "19553a5b.e55e06",
+    "type": "http request",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "method": "use",
+    "ret": "txt",
+    "url": "",
+    "tls": "",
+    "x": 710,
+    "y": 120,
+    "wires": [
+        [
+            "9ec44c39.d8256"
+        ]
+    ]
+}

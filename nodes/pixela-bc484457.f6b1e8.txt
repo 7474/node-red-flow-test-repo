@@ -1,0 +1,16 @@
+{
+    "id": "bc484457.f6b1e8",
+    "type": "pixela",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "method": "PUT",
+    "path": "/graphs/node-red-deploy/increment",
+    "apiclient": "3c17b71.4497e48",
+    "x": 400,
+    "y": 80,
+    "wires": [
+        [
+            "9715ffc3.6db3c"
+        ]
+    ]
+}

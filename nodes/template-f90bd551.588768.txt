@@ -1,0 +1,19 @@
+{
+    "id": "f90bd551.588768",
+    "type": "template",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "field": "payload",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "w {{payload.message}}",
+    "output": "str",
+    "x": 524,
+    "y": 432,
+    "wires": [
+        [
+            "c5f04d64.30b5c"
+        ]
+    ]
+}

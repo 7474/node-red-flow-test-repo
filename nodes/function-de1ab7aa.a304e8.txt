@@ -1,0 +1,18 @@
+{
+    "id": "de1ab7aa.a304e8",
+    "type": "function",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "func": "msg.path = "/graphs/" + msg.req.params.graph + "/increment";
+
+return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 370,
+    "y": 704,
+    "wires": [
+        [
+            "68702382.44349c"
+        ]
+    ]
+}

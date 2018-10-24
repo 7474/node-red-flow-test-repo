@@ -1,0 +1,21 @@
+{
+    "id": "32d4bc00.77fbd4",
+    "type": "function",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "func": "msg.statusCode = 303;
+msg.headers = {
+    Location: "https://pixe.la/v1/users/koudenpa/graphs/" + msg.req.params.graph
+}
+delete msg.payload;
+return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 546,
+    "y": 768,
+    "wires": [
+        [
+            "8ccc4a3c.7f2298"
+        ]
+    ]
+}

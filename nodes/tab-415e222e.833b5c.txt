@@ -1,0 +1,7 @@
+{
+    "id": "415e222e.833b5c",
+    "type": "tab",
+    "label": "Pixela",
+    "disabled": false,
+    "info": ""
+}

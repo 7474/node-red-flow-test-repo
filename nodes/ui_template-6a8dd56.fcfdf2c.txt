@@ -1,0 +1,19 @@
+{
+    "id": "6a8dd56.fcfdf2c",
+    "type": "ui_template",
+    "z": "415e222e.833b5c",
+    "group": "70546d19.336244",
+    "name": "www",
+    "order": 2,
+    "width": "12",
+    "height": "4",
+    "format": "<img src="https://pixe.la/v1/users/koudenpa/graphs/www?{{msg.timestamp}}">",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "templateScope": "local",
+    "x": 514,
+    "y": 480,
+    "wires": [
+        []
+    ]
+}

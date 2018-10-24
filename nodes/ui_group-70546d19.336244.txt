@@ -1,0 +1,11 @@
+{
+    "id": "70546d19.336244",
+    "type": "ui_group",
+    "z": "",
+    "name": "KusaButton",
+    "tab": "5b228e6.578827",
+    "order": 1,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+}

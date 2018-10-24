@@ -1,0 +1,7 @@
+{
+    "id": "d9796bee.0a76f8",
+    "type": "git-nodes-config",
+    "z": "",
+    "name": "7474/node-red-flow-test-repo",
+    "git": "git@github.com:7474/node-red-flow-test-repo.git"
+}

@@ -1,0 +1,17 @@
+{
+    "id": "aeaa8328.86cca",
+    "type": "http in",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "url": "/pixela/counter/:graph",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 174,
+    "y": 704,
+    "wires": [
+        [
+            "de1ab7aa.a304e8"
+        ]
+    ]
+}

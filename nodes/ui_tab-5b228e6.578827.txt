@@ -1,0 +1,8 @@
+{
+    "id": "5b228e6.578827",
+    "type": "ui_tab",
+    "z": "",
+    "name": "Pixela",
+    "icon": "dashboard",
+    "order": 1
+}

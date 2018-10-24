@@ -1,0 +1,11 @@
+{
+    "id": "17bde4f1.7a835b",
+    "type": "ui_group",
+    "z": "",
+    "name": "Koudenpa's Node-RED deploy count",
+    "tab": "5b228e6.578827",
+    "order": 2,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+}

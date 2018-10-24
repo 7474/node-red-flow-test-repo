@@ -1,0 +1,6 @@
+{
+    "id": "3c17b71.4497e48",
+    "type": "pixela-client",
+    "z": "",
+    "name": "pixela-config"
+}
