@@ -1,0 +1,3 @@
+msg.path = "/graphs/" + msg.req.params.graph + "/increment";
+
+return msg;

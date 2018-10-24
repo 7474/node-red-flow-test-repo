@@ -1,0 +1,6 @@
+msg.statusCode = 303;
+msg.headers = {
+    Location: "https://pixe.la/v1/users/koudenpa/graphs/" + msg.req.params.graph
+}
+delete msg.payload;
+return msg;
