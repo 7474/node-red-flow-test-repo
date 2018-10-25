@@ -2,14 +2,14 @@
     "id": "f09ec3d1.e21db",
     "type": "git-nodes",
     "z": "47049d9f.6c1b94",
-    "label": "",
+    "label": "7474/node-red-flow-test-repo",
     "branch": "master",
     "sourcebranch": "master",
     "gitadd": "settings.js,package.json,.config.json,lib",
     "gitrmcache": "",
     "debugging": true,
     "git": "d9796bee.0a76f8",
-    "x": 140,
-    "y": 60,
+    "x": 120,
+    "y": 80,
     "wires": []
 }
