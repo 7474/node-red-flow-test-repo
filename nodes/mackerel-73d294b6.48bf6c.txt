@@ -1,0 +1,16 @@
+{
+    "id": "73d294b6.48bf6c",
+    "type": "mackerel",
+    "z": "384d4ce0.77c2e4",
+    "config": "15fbf139.b646af",
+    "name": "POST AlertCount",
+    "method": "POST",
+    "path": "/api/v0/services/{{{serviceName}}}/tsdb",
+    "x": 790,
+    "y": 140,
+    "wires": [
+        [
+            "fe74adb8.b35df"
+        ]
+    ]
+}

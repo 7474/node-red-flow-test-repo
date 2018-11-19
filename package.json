@@ -5,6 +5,7 @@
     "private": true,
     "dependencies": {
         "node-red-contrib-pixela": "x",
+        "node-red-contrib-mackerel": "x",
         "node-red-dashboard": "x",
         "node-red-contrib-git-nodes": "7474/node-red-contrib-git-nodes#custom"
     }

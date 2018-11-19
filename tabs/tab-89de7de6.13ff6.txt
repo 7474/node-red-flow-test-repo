@@ -1,0 +1,70 @@
+{
+    "id": "89de7de6.13ff6",
+    "type": "tab",
+    "label": "Sandbox",
+    "disabled": false,
+    "info": "",
+    "nodes": [
+        {
+            "id": "e6fdecd5.8053d",
+            "type": "http in",
+            "z": "89de7de6.13ff6",
+            "name": "",
+            "url": "/sandbox/post",
+            "method": "post",
+            "upload": false,
+            "swaggerDoc": "",
+            "x": 130,
+            "y": 60,
+            "wires": [
+                [
+                    "6074127d.a3c09c",
+                    "817e04ad.bd97f8"
+                ]
+            ]
+        },
+        {
+            "id": "817e04ad.bd97f8",
+            "type": "http response",
+            "z": "89de7de6.13ff6",
+            "name": "",
+            "statusCode": "200",
+            "headers": {},
+            "x": 360,
+            "y": 100,
+            "wires": []
+        },
+        {
+            "id": "6074127d.a3c09c",
+            "type": "debug",
+            "z": "89de7de6.13ff6",
+            "name": "",
+            "active": true,
+            "tosidebar": true,
+            "console": false,
+            "tostatus": false,
+            "complete": "true",
+            "x": 350,
+            "y": 60,
+            "wires": []
+        },
+        {
+            "id": "b535c5af.ba5f78",
+            "type": "http in",
+            "z": "89de7de6.13ff6",
+            "name": "",
+            "url": "/sandbox/get",
+            "method": "get",
+            "upload": false,
+            "swaggerDoc": "",
+            "x": 130,
+            "y": 100,
+            "wires": [
+                [
+                    "817e04ad.bd97f8",
+                    "6074127d.a3c09c"
+                ]
+            ]
+        }
+    ]
+}

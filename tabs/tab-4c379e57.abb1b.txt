@@ -1,0 +1,371 @@
+{
+    "id": "4c379e57.abb1b",
+    "type": "tab",
+    "label": "Kusa Counter",
+    "disabled": false,
+    "info": "",
+    "nodes": [
+        {
+            "id": "bae647e9.c50948",
+            "type": "ui_form",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "label": "Create new counter",
+            "group": "e7ed0469.56adf8",
+            "order": 0,
+            "width": 0,
+            "height": 0,
+            "options": [
+                {
+                    "label": "id",
+                    "value": "id",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "label": "color",
+                    "value": "color",
+                    "type": "text",
+                    "required": false
+                }
+            ],
+            "formValue": {
+                "id": "",
+                "color": ""
+            },
+            "payload": "",
+            "submit": "submit",
+            "cancel": "cancel",
+            "topic": "",
+            "x": 150,
+            "y": 300,
+            "wires": [
+                [
+                    "56461838.c0e158"
+                ]
+            ]
+        },
+        {
+            "id": "341f1194.f2f4ce",
+            "type": "pixela",
+            "z": "4c379e57.abb1b",
+            "name": "POST Graph",
+            "method": "POST",
+            "path": "/",
+            "apiclient": "3c17b71.4497e48",
+            "x": 510,
+            "y": 300,
+            "wires": [
+                [
+                    "88d5d748.510758",
+                    "5e7e6a4a.7fa004",
+                    "bbe421df.db4a4"
+                ]
+            ]
+        },
+        {
+            "id": "56461838.c0e158",
+            "type": "function",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "func": "msg.method = "POST";
+msg.path = "/graphs";
+var q = msg.payload;
+msg.payload = {
+    id: q.id,
+    name: q.id,
+    unit: "view",
+    type: "int",
+    color: q.color || "shibafu"
+};
+msg.graphUrl = "https://node-red.7474.jp:8443/pixela/counter/" + q.id + "?mode=short";
+
+return msg;",
+            "outputs": 1,
+            "noerr": 0,
+            "x": 370,
+            "y": 300,
+            "wires": [
+                [
+                    "341f1194.f2f4ce",
+                    "5e7e6a4a.7fa004"
+                ]
+            ]
+        },
+        {
+            "id": "804441eb.f4e16",
+            "type": "ui_toast",
+            "z": "4c379e57.abb1b",
+            "position": "top right",
+            "displayTime": "3",
+            "highlight": "",
+            "outputs": 0,
+            "ok": "OK",
+            "cancel": "",
+            "topic": "",
+            "name": "",
+            "x": 870,
+            "y": 300,
+            "wires": []
+        },
+        {
+            "id": "88d5d748.510758",
+            "type": "template",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "field": "payload",
+            "fieldType": "msg",
+            "format": "handlebars",
+            "syntax": "mustache",
+            "template": "w {{payload.message}}",
+            "output": "str",
+            "x": 700,
+            "y": 300,
+            "wires": [
+                [
+                    "804441eb.f4e16"
+                ]
+            ]
+        },
+        {
+            "id": "b044b08f.4f5af",
+            "type": "comment",
+            "z": "4c379e57.abb1b",
+            "name": "Create Counter Graph",
+            "info": "",
+            "x": 120,
+            "y": 260,
+            "wires": []
+        },
+        {
+            "id": "5e7e6a4a.7fa004",
+            "type": "debug",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "active": true,
+            "tosidebar": true,
+            "console": false,
+            "tostatus": false,
+            "complete": "true",
+            "x": 550,
+            "y": 360,
+            "wires": []
+        },
+        {
+            "id": "bbe421df.db4a4",
+            "type": "ui_text",
+            "z": "4c379e57.abb1b",
+            "group": "e7ed0469.56adf8",
+            "order": 0,
+            "width": 0,
+            "height": 0,
+            "name": "",
+            "label": "Created counter embed snipet",
+            "format": "&lt;img src="{{msg.graphUrl}}"&gt;",
+            "layout": "col-center",
+            "x": 830,
+            "y": 360,
+            "wires": []
+        },
+        {
+            "id": "e5ab05e8.daeef8",
+            "type": "http in",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "url": "/pixela/counter/:graph",
+            "method": "get",
+            "upload": false,
+            "swaggerDoc": "",
+            "x": 170,
+            "y": 80,
+            "wires": [
+                [
+                    "8224ba3c.ac69b8"
+                ]
+            ]
+        },
+        {
+            "id": "ebef3344.c821d",
+            "type": "comment",
+            "z": "4c379e57.abb1b",
+            "name": "Kusa Counter",
+            "info": "",
+            "x": 86,
+            "y": 36,
+            "wires": []
+        },
+        {
+            "id": "85e85cfd.f8807",
+            "type": "http response",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "statusCode": "",
+            "headers": {},
+            "x": 650,
+            "y": 140,
+            "wires": []
+        },
+        {
+            "id": "d37ca18d.4107",
+            "type": "function",
+            "z": "4c379e57.abb1b",
+            "name": "Set redirect parameter",
+            "func": "var qs = "";
+if (msg.req.query) {
+    var q = msg.req.query;
+    qs = "?" + Object.keys(q).map(function(k) { return k + "=" + q[k]; }).join("&");
+}
+
+msg.statusCode = 303;
+msg.headers = {
+    Location: "https://pixe.la/v1/users/koudenpa/graphs/" + msg.req.params.graph + qs
+}
+delete msg.payload;
+return msg;",
+            "outputs": 1,
+            "noerr": 0,
+            "x": 440,
+            "y": 140,
+            "wires": [
+                [
+                    "85e85cfd.f8807",
+                    "45622530.4d2b4c"
+                ]
+            ]
+        },
+        {
+            "id": "b5c40c32.e195e",
+            "type": "pixela",
+            "z": "4c379e57.abb1b",
+            "name": "PUT Increment",
+            "method": "PUT",
+            "path": "/",
+            "apiclient": "3c17b71.4497e48",
+            "x": 220,
+            "y": 140,
+            "wires": [
+                [
+                    "d37ca18d.4107"
+                ]
+            ]
+        },
+        {
+            "id": "8224ba3c.ac69b8",
+            "type": "function",
+            "z": "4c379e57.abb1b",
+            "name": "Set Pixela parameter",
+            "func": "msg.path = "/graphs/" + msg.req.params.graph + "/increment";
+
+return msg;",
+            "outputs": 1,
+            "noerr": 0,
+            "x": 440,
+            "y": 80,
+            "wires": [
+                [
+                    "b5c40c32.e195e"
+                ]
+            ]
+        },
+        {
+            "id": "45622530.4d2b4c",
+            "type": "debug",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "active": true,
+            "tosidebar": true,
+            "console": false,
+            "tostatus": false,
+            "complete": "true",
+            "x": 650,
+            "y": 180,
+            "wires": []
+        },
+        {
+            "id": "94e06f31.c03ab",
+            "type": "catch",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "scope": null,
+            "x": 120,
+            "y": 460,
+            "wires": [
+                [
+                    "296fa738.28adc8",
+                    "8698d2f0.e83ee",
+                    "b71b2d32.a6415"
+                ]
+            ]
+        },
+        {
+            "id": "1c7f4dbd.5f45a2",
+            "type": "ui_toast",
+            "z": "4c379e57.abb1b",
+            "position": "top right",
+            "displayTime": "3",
+            "highlight": "#ff8080",
+            "outputs": 0,
+            "ok": "OK",
+            "cancel": "",
+            "topic": "",
+            "name": "",
+            "x": 486,
+            "y": 460,
+            "wires": []
+        },
+        {
+            "id": "296fa738.28adc8",
+            "type": "template",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "field": "payload",
+            "fieldType": "msg",
+            "format": "handlebars",
+            "syntax": "mustache",
+            "template": "Catch Error. {{payload.message}}",
+            "output": "str",
+            "x": 296,
+            "y": 460,
+            "wires": [
+                [
+                    "1c7f4dbd.5f45a2"
+                ]
+            ]
+        },
+        {
+            "id": "8698d2f0.e83ee",
+            "type": "debug",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "active": true,
+            "tosidebar": true,
+            "console": false,
+            "tostatus": false,
+            "complete": "true",
+            "x": 286,
+            "y": 492,
+            "wires": []
+        },
+        {
+            "id": "1b94e481.d3bd1b",
+            "type": "comment",
+            "z": "4c379e57.abb1b",
+            "name": "Handle Error",
+            "info": "",
+            "x": 90,
+            "y": 420,
+            "wires": []
+        },
+        {
+            "id": "b71b2d32.a6415",
+            "type": "http response",
+            "z": "4c379e57.abb1b",
+            "name": "",
+            "statusCode": "500",
+            "headers": {},
+            "x": 296,
+            "y": 524,
+            "wires": []
+        }
+    ]
+}

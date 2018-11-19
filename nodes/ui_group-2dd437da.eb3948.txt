@@ -1,0 +1,11 @@
+{
+    "id": "2dd437da.eb3948",
+    "type": "ui_group",
+    "z": "",
+    "name": "New Graph",
+    "tab": "2b2b1386.ceea2c",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+}

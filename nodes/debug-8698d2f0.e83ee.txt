@@ -1,0 +1,14 @@
+{
+    "id": "8698d2f0.e83ee",
+    "type": "debug",
+    "z": "4c379e57.abb1b",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "x": 286,
+    "y": 492,
+    "wires": []
+}

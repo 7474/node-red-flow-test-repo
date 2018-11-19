@@ -1,0 +1,18 @@
+{
+    "id": "341f1194.f2f4ce",
+    "type": "pixela",
+    "z": "4c379e57.abb1b",
+    "name": "POST Graph",
+    "method": "POST",
+    "path": "/",
+    "apiclient": "3c17b71.4497e48",
+    "x": 510,
+    "y": 300,
+    "wires": [
+        [
+            "88d5d748.510758",
+            "5e7e6a4a.7fa004",
+            "bbe421df.db4a4"
+        ]
+    ]
+}

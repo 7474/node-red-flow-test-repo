@@ -1,0 +1,7 @@
+{
+    "id": "89de7de6.13ff6",
+    "type": "tab",
+    "label": "Sandbox",
+    "disabled": false,
+    "info": ""
+}

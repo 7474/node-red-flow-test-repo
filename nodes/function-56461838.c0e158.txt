@@ -1,0 +1,29 @@
+{
+    "id": "56461838.c0e158",
+    "type": "function",
+    "z": "4c379e57.abb1b",
+    "name": "",
+    "func": "msg.method = "POST";
+msg.path = "/graphs";
+var q = msg.payload;
+msg.payload = {
+    id: q.id,
+    name: q.id,
+    unit: "view",
+    type: "int",
+    color: q.color || "shibafu"
+};
+msg.graphUrl = "https://node-red.7474.jp:8443/pixela/counter/" + q.id + "?mode=short";
+
+return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 370,
+    "y": 300,
+    "wires": [
+        [
+            "341f1194.f2f4ce",
+            "5e7e6a4a.7fa004"
+        ]
+    ]
+}

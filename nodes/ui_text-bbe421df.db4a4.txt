@@ -1,0 +1,16 @@
+{
+    "id": "bbe421df.db4a4",
+    "type": "ui_text",
+    "z": "4c379e57.abb1b",
+    "group": "e7ed0469.56adf8",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "Created counter embed snipet",
+    "format": "&lt;img src="{{msg.graphUrl}}"&gt;",
+    "layout": "col-center",
+    "x": 830,
+    "y": 360,
+    "wires": []
+}

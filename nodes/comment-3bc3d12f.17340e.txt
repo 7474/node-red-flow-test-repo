@@ -1,0 +1,10 @@
+{
+    "id": "3bc3d12f.17340e",
+    "type": "comment",
+    "z": "384d4ce0.77c2e4",
+    "name": "Open Alert Count Metric",
+    "info": "",
+    "x": 120,
+    "y": 40,
+    "wires": []
+}

@@ -1,0 +1,19 @@
+{
+    "id": "296fa738.28adc8",
+    "type": "template",
+    "z": "4c379e57.abb1b",
+    "name": "",
+    "field": "payload",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "Catch Error. {{payload.message}}",
+    "output": "str",
+    "x": 296,
+    "y": 460,
+    "wires": [
+        [
+            "1c7f4dbd.5f45a2"
+        ]
+    ]
+}

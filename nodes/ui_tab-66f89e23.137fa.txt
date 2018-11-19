@@ -1,0 +1,8 @@
+{
+    "id": "66f89e23.137fa",
+    "type": "ui_tab",
+    "z": "",
+    "name": "Pixela Counter",
+    "icon": "dashboard",
+    "order": 3
+}

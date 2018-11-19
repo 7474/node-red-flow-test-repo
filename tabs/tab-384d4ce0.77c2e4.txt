@@ -1,0 +1,143 @@
+{
+    "id": "384d4ce0.77c2e4",
+    "type": "tab",
+    "label": "Mackerel",
+    "disabled": false,
+    "info": "",
+    "nodes": [
+        {
+            "id": "23cd4eed.31dac2",
+            "type": "mackerel",
+            "z": "384d4ce0.77c2e4",
+            "config": "15fbf139.b646af",
+            "name": "",
+            "method": "GET",
+            "path": "/api/v0/alerts",
+            "x": 390,
+            "y": 80,
+            "wires": [
+                [
+                    "6412e694.623de8",
+                    "fe74adb8.b35df"
+                ]
+            ]
+        },
+        {
+            "id": "3a07e5d.8d2f61a",
+            "type": "inject",
+            "z": "384d4ce0.77c2e4",
+            "name": "Inject per 5 minute",
+            "topic": "",
+            "payload": "",
+            "payloadType": "date",
+            "repeat": "300",
+            "crontab": "",
+            "once": false,
+            "onceDelay": "",
+            "x": 160,
+            "y": 80,
+            "wires": [
+                [
+                    "23cd4eed.31dac2"
+                ]
+            ]
+        },
+        {
+            "id": "6412e694.623de8",
+            "type": "switch",
+            "z": "384d4ce0.77c2e4",
+            "name": "",
+            "property": "statusCode",
+            "propertyType": "msg",
+            "rules": [
+                {
+                    "t": "eq",
+                    "v": "200",
+                    "vt": "str"
+                },
+                {
+                    "t": "neq",
+                    "v": "200",
+                    "vt": "str"
+                }
+            ],
+            "checkall": "false",
+            "repair": false,
+            "outputs": 2,
+            "x": 350,
+            "y": 140,
+            "wires": [
+                [
+                    "10793ef8.6c4cd1"
+                ],
+                []
+            ]
+        },
+        {
+            "id": "10793ef8.6c4cd1",
+            "type": "function",
+            "z": "384d4ce0.77c2e4",
+            "name": "Summary alert count",
+            "func": "let time = (new Date()).getTime() / 1000;
+let alertCount = msg.payload.alerts.length;
+
+msg.serviceName = "node-red";
+msg.payload = new Array({
+    name: "alert-count",
+    time: time,
+    value: alertCount
+});
+
+return msg;",
+            "outputs": 1,
+            "noerr": 0,
+            "x": 560,
+            "y": 140,
+            "wires": [
+                [
+                    "73d294b6.48bf6c"
+                ]
+            ]
+        },
+        {
+            "id": "73d294b6.48bf6c",
+            "type": "mackerel",
+            "z": "384d4ce0.77c2e4",
+            "config": "15fbf139.b646af",
+            "name": "POST AlertCount",
+            "method": "POST",
+            "path": "/api/v0/services/{{{serviceName}}}/tsdb",
+            "x": 790,
+            "y": 140,
+            "wires": [
+                [
+                    "fe74adb8.b35df"
+                ]
+            ]
+        },
+        {
+            "id": "fe74adb8.b35df",
+            "type": "debug",
+            "z": "384d4ce0.77c2e4",
+            "name": "",
+            "active": true,
+            "tosidebar": true,
+            "console": false,
+            "tostatus": false,
+            "complete": "true",
+            "x": 750,
+            "y": 80,
+            "wires": []
+        },
+        {
+            "id": "3bc3d12f.17340e",
+            "type": "comment",
+            "z": "384d4ce0.77c2e4",
+            "name": "Open Alert Count Metric",
+            "info": "",
+            "x": 120,
+            "y": 40,
+            "wires": []
+        }
+    ]
+}

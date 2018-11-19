@@ -77,8 +77,8 @@
             "storeOutMessages": true,
             "fwdInMessages": true,
             "templateScope": "local",
-            "x": 144,
-            "y": 592,
+            "x": 140,
+            "y": 580,
             "wires": [
                 []
             ]
@@ -280,104 +280,11 @@
             "id": "3c2b363e.73861a",
             "type": "comment",
             "z": "415e222e.833b5c",
-            "name": "Deploy Count Graph",
+            "name": "Count Graphs",
             "info": "",
-            "x": 106,
-            "y": 544,
+            "x": 90,
+            "y": 540,
             "wires": []
-        },
-        {
-            "id": "aeaa8328.86cca",
-            "type": "http in",
-            "z": "415e222e.833b5c",
-            "name": "",
-            "url": "/pixela/counter/:graph",
-            "method": "get",
-            "upload": false,
-            "swaggerDoc": "",
-            "x": 174,
-            "y": 704,
-            "wires": [
-                [
-                    "de1ab7aa.a304e8"
-                ]
-            ]
-        },
-        {
-            "id": "59757bab.3e5f54",
-            "type": "comment",
-            "z": "415e222e.833b5c",
-            "name": "Kusa Counter",
-            "info": "",
-            "x": 86,
-            "y": 656,
-            "wires": []
-        },
-        {
-            "id": "8ccc4a3c.7f2298",
-            "type": "http response",
-            "z": "415e222e.833b5c",
-            "name": "",
-            "statusCode": "",
-            "headers": {},
-            "x": 672,
-            "y": 768,
-            "wires": []
-        },
-        {
-            "id": "32d4bc00.77fbd4",
-            "type": "function",
-            "z": "415e222e.833b5c",
-            "name": "",
-            "func": "msg.statusCode = 303;
-msg.headers = {
-    Location: "https://pixe.la/v1/users/koudenpa/graphs/" + msg.req.params.graph
-}
-delete msg.payload;
-return msg;",
-            "outputs": 1,
-            "noerr": 0,
-            "x": 546,
-            "y": 768,
-            "wires": [
-                [
-                    "8ccc4a3c.7f2298"
-                ]
-            ]
-        },
-        {
-            "id": "68702382.44349c",
-            "type": "pixela",
-            "z": "415e222e.833b5c",
-            "name": "PUT Increment",
-            "method": "PUT",
-            "path": "/",
-            "apiclient": "3c17b71.4497e48",
-            "x": 528,
-            "y": 704,
-            "wires": [
-                [
-                    "32d4bc00.77fbd4"
-                ]
-            ]
-        },
-        {
-            "id": "de1ab7aa.a304e8",
-            "type": "function",
-            "z": "415e222e.833b5c",
-            "name": "",
-            "func": "msg.path = "/graphs/" + msg.req.params.graph + "/increment";
-
-return msg;",
-            "outputs": 1,
-            "noerr": 0,
-            "x": 370,
-            "y": 704,
-            "wires": [
-                [
-                    "68702382.44349c"
-                ]
-            ]
         },
         {
             "id": "e3cb4b54.98fd08",
@@ -400,7 +307,8 @@ return msg;",
             "width": 0,
             "height": 0,
             "format": "<h4>Kusa Button Dashboard Access Counter</h4>
-<img src="/pixela/counter/wbtndb-counter">
+<img src="/pixela/counter/wbtndb-counter?mode=short" 
+    style="width: 200px;">
 
 <ol>
     <li>Set Node-RED Flow counter endpoint to img src. `/pixela/counter/wbtndb-counter`
@@ -412,11 +320,168 @@ return msg;",
             "storeOutMessages": true,
             "fwdInMessages": true,
             "templateScope": "local",
-            "x": 460,
-            "y": 340,
+            "x": 380,
+            "y": 580,
             "wires": [
                 []
             ]
+        },
+        {
+            "id": "a46aa335.5024e",
+            "type": "ui_form",
+            "z": "415e222e.833b5c",
+            "name": "",
+            "label": "Create new graph",
+            "group": "2dd437da.eb3948",
+            "order": 0,
+            "width": 0,
+            "height": 0,
+            "options": [
+                {
+                    "label": "id",
+                    "value": "id",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "label": "name",
+                    "value": "name",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "label": "unit",
+                    "value": "unit",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "label": "type",
+                    "value": "type",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "label": "color",
+                    "value": "color",
+                    "type": "text",
+                    "required": true
+                }
+            ],
+            "formValue": {
+                "id": "",
+                "name": "",
+                "unit": "",
+                "type": "",
+                "color": ""
+            },
+            "payload": "",
+            "submit": "submit",
+            "cancel": "cancel",
+            "topic": "",
+            "x": 150,
+            "y": 920,
+            "wires": [
+                [
+                    "506eab41.173d94"
+                ]
+            ]
+        },
+        {
+            "id": "45201bf0.80ee24",
+            "type": "pixela",
+            "z": "415e222e.833b5c",
+            "name": "POST Graph",
+            "method": "POST",
+            "path": "/",
+            "apiclient": "3c17b71.4497e48",
+            "x": 510,
+            "y": 920,
+            "wires": [
+                [
+                    "517b7a01.388b44",
+                    "2ce9e069.22a28"
+                ]
+            ]
+        },
+        {
+            "id": "506eab41.173d94",
+            "type": "function",
+            "z": "415e222e.833b5c",
+            "name": "",
+            "func": "msg.method = "POST";
+msg.path = "/graphs";
+
+return msg;",
+            "outputs": 1,
+            "noerr": 0,
+            "x": 350,
+            "y": 920,
+            "wires": [
+                [
+                    "45201bf0.80ee24",
+                    "2ce9e069.22a28"
+                ]
+            ]
+        },
+        {
+            "id": "cb0316b5.881758",
+            "type": "ui_toast",
+            "z": "415e222e.833b5c",
+            "position": "top right",
+            "displayTime": "3",
+            "highlight": "",
+            "outputs": 0,
+            "ok": "OK",
+            "cancel": "",
+            "topic": "",
+            "name": "",
+            "x": 870,
+            "y": 920,
+            "wires": []
+        },
+        {
+            "id": "517b7a01.388b44",
+            "type": "template",
+            "z": "415e222e.833b5c",
+            "name": "",
+            "field": "payload",
+            "fieldType": "msg",
+            "format": "handlebars",
+            "syntax": "mustache",
+            "template": "w {{payload.message}}",
+            "output": "str",
+            "x": 700,
+            "y": 920,
+            "wires": [
+                [
+                    "cb0316b5.881758"
+                ]
+            ]
+        },
+        {
+            "id": "e56b08a.e3faaf8",
+            "type": "comment",
+            "z": "415e222e.833b5c",
+            "name": "Pixela Manage",
+            "info": "",
+            "x": 100,
+            "y": 880,
+            "wires": []
+        },
+        {
+            "id": "2ce9e069.22a28",
+            "type": "debug",
+            "z": "415e222e.833b5c",
+            "name": "",
+            "active": true,
+            "tosidebar": true,
+            "console": false,
+            "tostatus": false,
+            "complete": "true",
+            "x": 550,
+            "y": 980,
+            "wires": []
         }
     ]
 }

@@ -1,0 +1,10 @@
+{
+    "id": "ebef3344.c821d",
+    "type": "comment",
+    "z": "4c379e57.abb1b",
+    "name": "Kusa Counter",
+    "info": "",
+    "x": 86,
+    "y": 36,
+    "wires": []
+}

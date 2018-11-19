@@ -1,0 +1,7 @@
+{
+    "id": "4c379e57.abb1b",
+    "type": "tab",
+    "label": "Kusa Counter",
+    "disabled": false,
+    "info": ""
+}

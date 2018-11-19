@@ -1,0 +1,20 @@
+{
+    "id": "3a07e5d.8d2f61a",
+    "type": "inject",
+    "z": "384d4ce0.77c2e4",
+    "name": "Inject per 5 minute",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "300",
+    "crontab": "",
+    "once": false,
+    "onceDelay": "",
+    "x": 160,
+    "y": 80,
+    "wires": [
+        [
+            "23cd4eed.31dac2"
+        ]
+    ]
+}

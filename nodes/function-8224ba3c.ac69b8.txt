@@ -1,0 +1,18 @@
+{
+    "id": "8224ba3c.ac69b8",
+    "type": "function",
+    "z": "4c379e57.abb1b",
+    "name": "Set Pixela parameter",
+    "func": "msg.path = "/graphs/" + msg.req.params.graph + "/increment";
+
+return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 440,
+    "y": 80,
+    "wires": [
+        [
+            "b5c40c32.e195e"
+        ]
+    ]
+}

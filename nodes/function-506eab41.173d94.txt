@@ -1,0 +1,20 @@
+{
+    "id": "506eab41.173d94",
+    "type": "function",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "func": "msg.method = "POST";
+msg.path = "/graphs";
+
+return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 350,
+    "y": 920,
+    "wires": [
+        [
+            "45201bf0.80ee24",
+            "2ce9e069.22a28"
+        ]
+    ]
+}

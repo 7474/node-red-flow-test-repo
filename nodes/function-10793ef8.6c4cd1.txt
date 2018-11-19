@@ -1,0 +1,26 @@
+{
+    "id": "10793ef8.6c4cd1",
+    "type": "function",
+    "z": "384d4ce0.77c2e4",
+    "name": "Summary alert count",
+    "func": "let time = (new Date()).getTime() / 1000;
+let alertCount = msg.payload.alerts.length;
+
+msg.serviceName = "node-red";
+msg.payload = new Array({
+    name: "alert-count",
+    time: time,
+    value: alertCount
+});
+
+return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 560,
+    "y": 140,
+    "wires": [
+        [
+            "73d294b6.48bf6c"
+        ]
+    ]
+}

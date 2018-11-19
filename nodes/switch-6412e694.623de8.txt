@@ -1,0 +1,31 @@
+{
+    "id": "6412e694.623de8",
+    "type": "switch",
+    "z": "384d4ce0.77c2e4",
+    "name": "",
+    "property": "statusCode",
+    "propertyType": "msg",
+    "rules": [
+        {
+            "t": "eq",
+            "v": "200",
+            "vt": "str"
+        },
+        {
+            "t": "neq",
+            "v": "200",
+            "vt": "str"
+        }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 2,
+    "x": 350,
+    "y": 140,
+    "wires": [
+        [
+            "10793ef8.6c4cd1"
+        ],
+        []
+    ]
+}

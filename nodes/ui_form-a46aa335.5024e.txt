@@ -1,0 +1,61 @@
+{
+    "id": "a46aa335.5024e",
+    "type": "ui_form",
+    "z": "415e222e.833b5c",
+    "name": "",
+    "label": "Create new graph",
+    "group": "2dd437da.eb3948",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "options": [
+        {
+            "label": "id",
+            "value": "id",
+            "type": "text",
+            "required": true
+        },
+        {
+            "label": "name",
+            "value": "name",
+            "type": "text",
+            "required": true
+        },
+        {
+            "label": "unit",
+            "value": "unit",
+            "type": "text",
+            "required": true
+        },
+        {
+            "label": "type",
+            "value": "type",
+            "type": "text",
+            "required": true
+        },
+        {
+            "label": "color",
+            "value": "color",
+            "type": "text",
+            "required": true
+        }
+    ],
+    "formValue": {
+        "id": "",
+        "name": "",
+        "unit": "",
+        "type": "",
+        "color": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "",
+    "x": 150,
+    "y": 920,
+    "wires": [
+        [
+            "506eab41.173d94"
+        ]
+    ]
+}

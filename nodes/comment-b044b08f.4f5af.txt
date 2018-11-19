@@ -1,0 +1,10 @@
+{
+    "id": "b044b08f.4f5af",
+    "type": "comment",
+    "z": "4c379e57.abb1b",
+    "name": "Create Counter Graph",
+    "info": "",
+    "x": 120,
+    "y": 260,
+    "wires": []
+}

@@ -1,0 +1,11 @@
+{
+    "id": "e7ed0469.56adf8",
+    "type": "ui_group",
+    "z": "",
+    "name": "New Counter",
+    "tab": "66f89e23.137fa",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+}

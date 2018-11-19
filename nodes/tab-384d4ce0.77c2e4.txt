@@ -1,0 +1,7 @@
+{
+    "id": "384d4ce0.77c2e4",
+    "type": "tab",
+    "label": "Mackerel",
+    "disabled": false,
+    "info": ""
+}

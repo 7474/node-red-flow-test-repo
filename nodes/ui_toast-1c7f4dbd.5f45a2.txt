@@ -1,0 +1,16 @@
+{
+    "id": "1c7f4dbd.5f45a2",
+    "type": "ui_toast",
+    "z": "4c379e57.abb1b",
+    "position": "top right",
+    "displayTime": "3",
+    "highlight": "#ff8080",
+    "outputs": 0,
+    "ok": "OK",
+    "cancel": "",
+    "topic": "",
+    "name": "",
+    "x": 486,
+    "y": 460,
+    "wires": []
+}

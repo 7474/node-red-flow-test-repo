@@ -1,0 +1,40 @@
+{
+    "id": "bae647e9.c50948",
+    "type": "ui_form",
+    "z": "4c379e57.abb1b",
+    "name": "",
+    "label": "Create new counter",
+    "group": "e7ed0469.56adf8",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "options": [
+        {
+            "label": "id",
+            "value": "id",
+            "type": "text",
+            "required": true
+        },
+        {
+            "label": "color",
+            "value": "color",
+            "type": "text",
+            "required": false
+        }
+    ],
+    "formValue": {
+        "id": "",
+        "color": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "",
+    "x": 150,
+    "y": 300,
+    "wires": [
+        [
+            "56461838.c0e158"
+        ]
+    ]
+}

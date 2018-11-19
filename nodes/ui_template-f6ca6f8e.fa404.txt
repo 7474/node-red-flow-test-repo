@@ -11,8 +11,8 @@
     "storeOutMessages": true,
     "fwdInMessages": true,
     "templateScope": "local",
-    "x": 144,
-    "y": 592,
+    "x": 140,
+    "y": 580,
     "wires": [
         []
     ]

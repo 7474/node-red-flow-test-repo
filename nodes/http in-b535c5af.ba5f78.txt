@@ -1,0 +1,18 @@
+{
+    "id": "b535c5af.ba5f78",
+    "type": "http in",
+    "z": "89de7de6.13ff6",
+    "name": "",
+    "url": "/sandbox/get",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 130,
+    "y": 100,
+    "wires": [
+        [
+            "817e04ad.bd97f8",
+            "6074127d.a3c09c"
+        ]
+    ]
+}

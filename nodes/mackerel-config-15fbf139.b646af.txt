@@ -1,0 +1,6 @@
+{
+    "id": "15fbf139.b646af",
+    "type": "mackerel-config",
+    "z": "",
+    "name": "mackerel-config"
+}

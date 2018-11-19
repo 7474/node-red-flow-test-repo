@@ -1,0 +1,17 @@
+{
+    "id": "23cd4eed.31dac2",
+    "type": "mackerel",
+    "z": "384d4ce0.77c2e4",
+    "config": "15fbf139.b646af",
+    "name": "",
+    "method": "GET",
+    "path": "/api/v0/alerts",
+    "x": 390,
+    "y": 80,
+    "wires": [
+        [
+            "6412e694.623de8",
+            "fe74adb8.b35df"
+        ]
+    ]
+}

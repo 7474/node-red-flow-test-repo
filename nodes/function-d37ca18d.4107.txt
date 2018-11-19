@@ -1,0 +1,28 @@
+{
+    "id": "d37ca18d.4107",
+    "type": "function",
+    "z": "4c379e57.abb1b",
+    "name": "Set redirect parameter",
+    "func": "var qs = "";
+if (msg.req.query) {
+    var q = msg.req.query;
+    qs = "?" + Object.keys(q).map(function(k) { return k + "=" + q[k]; }).join("&");
+}
+
+msg.statusCode = 303;
+msg.headers = {
+    Location: "https://pixe.la/v1/users/koudenpa/graphs/" + msg.req.params.graph + qs
+}
+delete msg.payload;
+return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 440,
+    "y": 140,
+    "wires": [
+        [
+            "85e85cfd.f8807",
+            "45622530.4d2b4c"
+        ]
+    ]
+}
